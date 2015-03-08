@@ -140,7 +140,7 @@ different window."
   "Get filters defined for this module."
   (save-excursion
     (haskell-trace-goto-options-line)
-    (remove-if-not
+    (cl-remove-if-not
      #'identity
      (mapcar
       (lambda (filter)
