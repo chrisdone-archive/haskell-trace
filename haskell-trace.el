@@ -72,6 +72,8 @@ different window."
   (let ((inhibit-read-only t))
     (erase-buffer)
     (save-buffer)
+    (revert-buffer t t)
+    (haskell-trace-mode)
     (auto-revert-tail-mode)))
 
 (define-key haskell-trace-mode-map (kbd "p") 'previous-error-no-select)
